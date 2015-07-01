@@ -1,0 +1,7 @@
+*.sw[opa]
+
+node_modules/*
+
+npm-debug.log
+
+mirrors/*
