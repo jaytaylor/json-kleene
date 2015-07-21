@@ -9,6 +9,15 @@
   },
   "author": "Jay Taylor <jay@jaytaylor.com>",
   "license": "BSD",
+  "engines": {
+    "iojs": "2.3.4"
+  },
+  "dependencies": {
+    "express": "^4.13.1",
+    "flags": "^0.1.3",
+    "jsdom": "5.6.1",
+    "request-promise": "^0.4.2"
+  },
   "devDependencies": {
     "express": "^4.13.1",
     "flags": "^0.1.3",
