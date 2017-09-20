@@ -16,7 +16,6 @@
 var fs = require('fs'),
     flags = require('flags'),
     kleene = require('./lib/kleene.js');
-    
 
 var cli = function() {
     // Define and parse command-line flag options.
@@ -24,7 +23,11 @@ var cli = function() {
     flags.defineBoolean('pretty', true, 'Pretty print JSON output.');
     flags.defineInteger('num-spaces', 4, 'Number of spaces to use for pretty-printed JSON output.');
     flags.defineBoolean('skip-empty', false, 'Writing output will be skipped if the generated JSON is empty.');
-    flags.defineMultiString('strip', null, 'Specify jQuery-compatible filter criteria for element(s) to remove/eliminate.\ne.g.:\n    --strip button\n    --strip a,span --strip=button');
+    flags.defineMultiString(
+        'strip',
+        null,
+        'Specify jQuery-compatible filter criteria for element(s) to remove/eliminate.\ne.g.:\n    --strip button\n    --strip a,span --strip=button'
+    );
     flags.defineBoolean('server', false, 'Starts in web-server mode.');
 
     flags.parse(null, false);
@@ -63,5 +66,3 @@ var cli = function() {
 if (process.argv && process.argv.length > 1 && process.argv[1].replace(/^.*\//, '') === 'json-kleene.js') {
     cli();
 }
-
-
